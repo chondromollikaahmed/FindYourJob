@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a8a364c67d947faa64aa20da2f6f827" Name="Diagram1">
+        <EntityTypeShape EntityType="FindYourJobModel.AccountStatu" Width="1.5" PointX="1.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Company" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Country" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.CurrentJobStatu" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Education" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Employee" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.JobApply" Width="1.5" PointX="7.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.JobApplyStatu" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.JobCategory" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.JobPost" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Job" Width="1.5" PointX="3" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.JobStatu" Width="1.5" PointX="3" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Language" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.Skill" Width="1.5" PointX="5.25" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.User" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.UserType" Width="1.5" PointX="1.5" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindYourJobModel.WorkExperience" Width="1.5" PointX="5.25" PointY="28.25" IsExpanded="true" />
+        <AssociationConnector Association="FindYourJobModel.FK_Users_AccountStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Company_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobPosts_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Educations_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Employee_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Employee_CurrentJobStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Educations_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Employee_JobCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Employee_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobApply_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Languages_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Skills_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_WorkExperiences_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobApply_JobApplyStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobApply_JobPosts" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobPosts_JobCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_Jobs_JobCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobPosts_Jobs" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobPosts_JobStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_JobPosts_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FindYourJobModel.FK_UserType_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
