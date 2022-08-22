@@ -1056,6 +1056,7 @@
     <Content Include="Views\Home\Freelancer.cshtml" />
     <Content Include="Views\Home\PostAJob.cshtml" />
     <Content Include="Views\Home\DashBoard.cshtml" />
+    <Content Include="Views\Home\ProfileF.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

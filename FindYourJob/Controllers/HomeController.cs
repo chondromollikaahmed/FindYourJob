@@ -104,5 +104,12 @@ namespace FindYourJob.Controllers
             return View();
         }
 
+
+
+        public ActionResult ProfileF()
+        {
+            return View();
+        }
+
     }
 }
