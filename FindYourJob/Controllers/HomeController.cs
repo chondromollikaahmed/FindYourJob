@@ -51,6 +51,58 @@ namespace FindYourJob.Controllers
         {
             return Redirect("http://www.facebook.com/chondromollika.ahmed.9");
         }
-      
+
+
+        public ActionResult JobPage ()
+        {
+            return View();
+        }
+
+
+
+        public ActionResult TaskPage()
+        {
+            return View();
+        }
+
+
+        public ActionResult CompanyProfile()
+        {
+            return View();
+        }
+
+
+        public ActionResult BrowseCompanies()
+        {
+            return View();
+        }
+
+
+
+        public ActionResult BrowseGrid()
+        {
+            return View();
+        }
+
+
+
+
+        public ActionResult Freelancer()
+        {
+            return View();
+        }
+
+
+        public ActionResult PostAJob()
+        {
+            return View();
+        }
+
+
+        public ActionResult DashBoard()
+        {
+            return View();
+        }
+
     }
 }

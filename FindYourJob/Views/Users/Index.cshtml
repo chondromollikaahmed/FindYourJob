@@ -74,9 +74,9 @@
                 @Html.DisplayFor(modelItem => item.UserType.UserType1)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.UserID }, new { @class = "button ripple-effect" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UserID }, new { @class = "button ripple-effect" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserID }, new { @class = "button ripple-effect" })
             </td>
         </tr>
     }
