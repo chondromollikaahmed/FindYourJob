@@ -41,7 +41,7 @@
                 <!-- Welcome Text -->
                 <div class="welcome-text">
                     <h3 style="font-size: 26px;">Let's create your account!</h3>
-                    <span>Already have an account? <a href="pages-login.html">Log In!</a></span>
+                    <span>Already have an account? <a href="/user/newuser">Log In!</a></span>
                 </div>
 
                 <!-- Account Type -->
@@ -60,13 +60,13 @@
 
 
 
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.ValidationSummary(true, "ssss", new { @class = "text-danger" })
 
 
                 <!-- Form -->
 
 
-                @using (Html.BeginForm("NewUser","User",FormMethod.Post,
+                @using (Html.BeginForm("NewUser", "User", FormMethod.Post,
                     new
                     {
                         @id = "register-account-form",
@@ -76,83 +76,124 @@
                     ))
                 {
                     @Html.AntiForgeryToken()
-                   
-                        <div class="input-with-icon-left">
-                            <i class="icon-material-baseline-mail-outline"></i>
 
-                            @Html.EditorFor(model => model.EmailAddress,
-                           new
+
+
+                    <div class="input-with-icon-left">
+                        <i class="icon-material-baseline-mail-outline"></i>
+
+                        @Html.EditorFor(model => model.UserName,
+                       new
+                       {
+                           htmlAttributes = new
                            {
-                               htmlAttributes = new
-                               {
-                                   @type = "email",
-                                   @class = "input-text with-border"
-                               ,
-                                   @name = "emailaddress-register",
-                                   @id = "emailaddress-register",
-                                   @placeholder = "Email Address",
-                                   @required="true"
-                               }
-                           })
-                            @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
-                        </div>
-
-                        <div class="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
-                            <i class="icon-material-outline-lock"></i>
-
-
-
-                            @Html.EditorFor(model => model.UserName,
-                          new
-                          {
-                              htmlAttributes = new
-                              {
-                                  @type = "password",
-                                  @class = "input-text with-border"
-                              ,
-                                  @name = "password-register",
-                                  @id = "password-register",
-                                  @placeholder = "Password",
-                                  @required = "true"
-                              }
-                          })
-                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-
-                        </div>
-
-                        <div class="input-with-icon-left">
-                            <i class="icon-material-outline-lock"></i>
-
-
-                            @Html.EditorFor(model => model.UserName,
-                          new
-                          {
-                              htmlAttributes = new
-                              {
-                                  @type = "text",
-                                  @class = "input-text with-border"
-                              ,
-                                  @name = "password-repeat-register",
-                                  @id = "password-repeat-register",
-                                  @placeholder = "Repeat Password",
-                                  @required = "true"
-                              }
-                          })
-                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-
-                        </div>
-                    }
-
-                    <!-- Button -->
-                    <input value="Register" class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Register <i class="icon-material-outline-arrow-right-alt"></i></input>
-
-                    <!-- Social Login -->
-                    <div class="social-login-separator"><span>or</span></div>
-                    <div class="social-login-buttons">
-                        <button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Register via Facebook</button>
-                        <button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Register via Google+</button>
+                               @type = "username",
+                               @class = "input-text with-border"
+                           ,
+                               @name = "username",
+                               @id = "username",
+                               @placeholder = "UserName",
+                               @required = "true"
+                           }
+                       })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                     </div>
+
+                    <div class="input-with-icon-left">
+                        <i class="icon-material-baseline-mail-outline"></i>
+
+                        @Html.EditorFor(model => model.EmailAddress,
+                       new
+                       {
+                           htmlAttributes = new
+                           {
+                               @type = "email",
+                               @class = "input-text with-border"
+                           ,
+                               @name = "emailaddress-register",
+                               @id = "emailaddress-register",
+                               @placeholder = "Email Address",
+                               @required = "true"
+                           }
+                       })
+                        @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
+                        <i class="icon-material-outline-lock"></i>
+
+
+
+                        @Html.EditorFor(model => model.Password,
+                      new
+                      {
+                          htmlAttributes = new
+                          {
+                              @type = "password",
+                              @class = "input-text with-border"
+                          ,
+                              @name = "password-register",
+                              @id = "password-register",
+                              @placeholder = "Password",
+                              @required = "true"
+                          }
+                      })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="input-with-icon-left" id="contact">
+                        <i class="icon-material-outline-lock"></i>
+
+
+                        @Html.EditorFor(model => model.ContactNo,
+                      new
+                      {
+                          htmlAttributes = new
+                          {
+                              @type = "number",
+                              @class = "input-text with-border"
+                          ,
+                              @name = "contactNo",
+                              @id = "contactNo",
+                              @placeholder = "Contact No",
+                              @required = "true"
+                          }
+                      })
+                        @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+
+
+                    </div>
+
+
+
+              
+
+
+
+
+
+
+                    <input value="Register" class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="register-account-form"></input>
+
+
+                }
+
+                <!-- Button -->
+                <!-- Social Login -->
+                <div class="social-login-separator"><span>or</span></div>
+                <div class="social-login-buttons">
+                    <button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Register via Facebook</button>
+                    <button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Register via Google+</button>
                 </div>
+            </div>
 
         </div>
     </div>
@@ -162,3 +203,36 @@
 <!-- Spacer -->
 <div class="margin-top-70"></div>
 <!-- Spacer / End-->
+
+
+
+
+
+<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
+
+
+<script>
+
+
+    val = $('#selectpicker').val();
+
+    switch (val) {
+
+        case "Ketchup":
+
+            $('#contact').hide();
+            $('#social-login-buttons').hide();
+
+            break;
+
+
+
+        case "Relish":
+
+            $('#contact').show();
+            $('#social-login-buttons').show();
+
+            break;
+
+    }
+</script>

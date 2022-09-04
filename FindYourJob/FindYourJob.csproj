@@ -194,6 +194,7 @@
     <Compile Include="Models\Language.cs">
       <DependentUpon>FindYourJob.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginMD.cs" />
     <Compile Include="Models\Skill.cs">
       <DependentUpon>FindYourJob.tt</DependentUpon>
     </Compile>
