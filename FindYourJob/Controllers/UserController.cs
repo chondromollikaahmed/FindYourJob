@@ -14,5 +14,13 @@ namespace FindYourJob.Controllers
         {
             return View(new UserMD());
         }
+
+
+        public ActionResult Login()
+        {
+            return View();
+
+        }
+
     }
 }
