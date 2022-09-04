@@ -3,8 +3,8 @@
 #### _A marketplace for both remote and office job_
 ---
 
----
-[![CA|Author](https://i.ibb.co/k1QJ7Dx/ca-only.png)](https://web.facebook.com/chondromollika.ahmed.9)
+
+[![CA|Author](https://raw.githubusercontent.com/chondromollikaahmed/FindYourJob/master/FindYourJob/Content/assets/images/FindYourJobNew.png)](https://web.facebook.com/chondromollika.ahmed.9)
 
 ---
 
@@ -32,7 +32,7 @@ who applied can also be viewed by the company.
 - Admin will delete any user if that person break any rules.
 
 ---
-
+#Contributor
 * Website: [chondromollikaahmed.github.io](https://chondromollikaahmed.github.io)
 * Facebook: [@chondromollikaahmed](https://facebook.com/chondromollika.ahmed.9)
 * Github: [@chondromollikaahmed](https://github.com/chondromollikaahmed)
