@@ -111,5 +111,11 @@ namespace FindYourJob.Controllers
             return View();
         }
 
+
+        public ActionResult message ()
+        {
+            return View();
+        }
+
     }
 }

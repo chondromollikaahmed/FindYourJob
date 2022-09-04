@@ -1057,6 +1057,8 @@
     <Content Include="Views\Home\PostAJob.cshtml" />
     <Content Include="Views\Home\DashBoard.cshtml" />
     <Content Include="Views\Home\ProfileF.cshtml" />
+    <Content Include="Views\Home\message.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
