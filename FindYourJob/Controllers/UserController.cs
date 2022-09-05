@@ -17,6 +17,15 @@ namespace FindYourJob.Controllers
         public ActionResult NewUser()
         {
 
+
+                int usertypeid = 0;
+                if (!string.IsNullOrEmpty(Convert.ToString(Session["UserTypeID"])))
+                {
+                    int.TryParse(Convert.ToString(Session["UserTypeID"]), out usertypeid);
+
+                 return RedirectToAction("Index","home");
+                }
+
             ViewBag.userTypeId = new SelectList(db.UserTypes.ToList(), "UserTypeID", "UserType", " 0");
             return View(new UserMD());
         }
@@ -97,6 +106,17 @@ namespace FindYourJob.Controllers
 
         public ActionResult Login()
         {
+
+
+            int usertypeid = 0;
+            if (!string.IsNullOrEmpty(Convert.ToString(Session["UserTypeID"])))
+            {
+                int.TryParse(Convert.ToString(Session["UserTypeID"]), out usertypeid);
+
+                return RedirectToAction("Index", "home");
+            }
+
+
             return View(new LoginMD());
 
         }
@@ -118,7 +138,7 @@ namespace FindYourJob.Controllers
 
                     if (user.UserTypeID == 1)
                     {
-                        return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("Index", "Home");
                     }
                     else if (user.UserTypeID == 2)
                     {
@@ -139,7 +159,7 @@ namespace FindYourJob.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("EmailAddress", "Invalid Email or Password");
+                    ModelState.AddModelError("UserName", "Invalid Email or Password");
                 }
             }
 

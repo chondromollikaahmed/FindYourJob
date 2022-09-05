@@ -18,18 +18,24 @@
     </div>
 </div>
 
+<h2>Index</h2>
+
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { @class = "button ripple-effect" })
 </p>
-<table class="table">
+
+
+<table  class="basic-table" border="1">
     <tr>
         <th>
+ 
             @Html.DisplayNameFor(model => model.CategoryName)
         </th>
         <th>
+       
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        <th></th>
+       
     </tr>
 
     @foreach (var item in Model)
@@ -42,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.JobCategoryID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.JobCategoryID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.JobCategoryID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.JobCategoryID }, new { @class = "button ripple-effect" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.JobCategoryID }, new { @class = "button ripple-effect" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.JobCategoryID }, new { @class = "button ripple-effect" })
             </td>
         </tr>
     }

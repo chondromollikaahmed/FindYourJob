@@ -20,11 +20,30 @@
 </head>
 <body>
 
+
+    @{
+
+        int usertypeid = 0;
+
+
+        if (!string.IsNullOrEmpty(Convert.ToString(Session["UserTypeID"])))
+        {
+            int.TryParse(Convert.ToString(Session["UserTypeID"]), out usertypeid);
+
+        }
+
+
+
+
+
+
+
+    }
     <!-- Wrapper -->
     <div id="wrapper" class="wrapper">
 
         <!-- Header Container
-    ================================================== -->
+        ================================================== -->
         <header id="header-container" class="fullwidth fullwidth dashboard-header not-sticky">
 
             <!-- Header -->
@@ -46,7 +65,7 @@
 
                                 <li>
                                     <a href="#" class="current">Home</a>
-                            
+
                                 </li>
 
                                 <li>
@@ -54,11 +73,11 @@
                                     <ul class="dropdown-nav">
                                         <li>
                                             <a href="#">Browse Jobs</a>
-                                        
+
                                         </li>
                                         <li>
                                             <a href="#">Browse Tasks</a>
-                       
+
                                         </li>
                                         <li><a href="browse-companies.html">Browse Companies</a></li>
                                         <li><a href="single-job-page.html">Job Page</a></li>
@@ -72,7 +91,7 @@
                                     <ul class="dropdown-nav">
                                         <li>
                                             <a href="#">Find a Freelancer</a>
-                                            
+
                                         </li>
                                         <li><a href="single-freelancer-profile.html">Freelancer Profile</a></li>
                                         <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
@@ -134,7 +153,17 @@
                     <div class="right-side">
 
                         <div class="header-widget">
-                            <a href="/Home/Login" class="popup-with-zoom-anim log-in-button" data-target="#sign-in-dialog"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
+
+
+                            @if (usertypeid == 0)
+                            {
+                                <a href="/user/login"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
+                            }
+                            else
+                            {
+                                <a href="/user/Logout"><i class="icon-feather-log-in"></i> <span>Log Out</span></a>
+                            }
+
                         </div>
 
                         <!-- Mobile Navigation Button -->
@@ -174,7 +203,7 @@
 
 
         <!-- Footer
-    ================================================== -->
+        ================================================== -->
         <div id="footer">
 
             <!-- Footer Top Section -->
@@ -330,8 +359,6 @@
 
     </div>
     <!-- Wrapper / End -->
-
-    
     <!-- Sign In Popup
     ================================================== -->
     <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
@@ -375,7 +402,7 @@
                     <button class="button full-width button-sliding-icon ripple-effect" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
 
                     <a href="~/Home/index2"> <button>Login By</button></a>
-                    
+
                     <!-- Social Login -->
                     <div class="social-login-separator"><span>or</span></div>
                     <div class="social-login-buttons">
@@ -440,9 +467,6 @@
         </div>
     </div>
     <!-- Sign In Popup / End -->
-
-
-    
     <!-- Scripts
     ================================================== -->
 

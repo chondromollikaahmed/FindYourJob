@@ -42,14 +42,16 @@
                 <!-- Welcome Text -->
                 <div class="welcome-text">
                     <h3>We're glad to see you again!</h3>
-                    <span>Don't have an account? <a href="pages-register.html">Sign Up!</a></span>
+                    <span>Don't have an account? <a href="/user/newuser">Sign Up!</a></span>
                 </div>
 
                 <!-- Form -->
 
 
 
-                @using (Html.BeginForm("NewUser", "User", FormMethod.Post,
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @using (Html.BeginForm("Login", "User", FormMethod.Post,
                     new
                     {
                         @id = "login-form",
@@ -69,17 +71,17 @@
                    {
                        htmlAttributes = new
                        {
-                           @type = "email",
+                           @type = "text",
                            @class = "input-text with-border"
                        ,
                            @name = "emailaddress",
                            @id = "emailaddress",
-                           @placeholder = "Email Address",
+                           @placeholder = "UserName Or Email",
                            @required = "true"
                        }
                    })
                         @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-                      
+
                     </div>
 
                     <div class="input-with-icon-left">
@@ -105,16 +107,16 @@
                     <a href="#" class="forgot-password">Forgot Password?</a>
                 }
 
-                    <!-- Button -->
-                    <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
+                <!-- Button -->
+                <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
 
-                    <!-- Social Login -->
-                    <div class="social-login-separator"><span>or</span></div>
-                    <div class="social-login-buttons">
-                        <button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Log In via Facebook</button>
-                        <button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Log In via Google+</button>
-                    </div>
+                <!-- Social Login -->
+                <div class="social-login-separator"><span>or</span></div>
+                <div class="social-login-buttons">
+                    <button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Log In via Facebook</button>
+                    <button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Log In via Google+</button>
                 </div>
+            </div>
 
             </div>
         </div>

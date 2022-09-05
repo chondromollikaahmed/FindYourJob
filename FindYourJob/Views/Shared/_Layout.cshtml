@@ -20,6 +20,26 @@
 </head>
 <body>
 
+
+    @{ 
+
+        int usertypeid = 0;
+
+
+        if (!string.IsNullOrEmpty(Convert.ToString(Session["UserTypeID"])))
+        {
+            int.TryParse(Convert.ToString(Session["UserTypeID"]), out usertypeid);
+
+        }
+
+
+
+
+
+
+
+}
+
     <!-- Wrapper -->
     <div id="wrapper" class="wrapper-with-transparent-header">
 
@@ -131,11 +151,23 @@
                     </div>
                     <!-- Left Side Content / End -->
                     <!-- Right Side Content / End -->
+
+                    
                     <div class="right-side">
 
                         <div class="header-widget">
-                            <a href="/user/login" ><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
-                        </div>
+
+
+
+                            @if (usertypeid == 0)
+                            {
+                                <a href="/user/login"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
+                            }
+                            else
+                                {
+                             <a href="/user/Logout"><i class="icon-feather-log-in"></i> <span>Log Out</span></a>
+                                }
+                            </div>
 
                         <!-- Mobile Navigation Button -->
                         <span class="mmenu-trigger">
